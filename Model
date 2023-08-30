@@ -1,17 +1,16 @@
-Part 1: Importing Required Libraries and Modules
-In this part, we import the necessary libraries for building and training the model. TensorFlow is the deep learning framework we'll use. We import specific modules from Keras to create the model layers.
+#Part 1: Importing Required Libraries and Modules
+#In this part, we import the necessary libraries for building and training the model. TensorFlow is the deep learning framework we'll use. We import specific modules from Keras to create the model layers.
+
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 
-Part 2: Loading and Preprocessing the Dataset
-In this part, we load and preprocess the dataset using ImageDataGenerator. We specify augmentation and normalization transformations for the training data. 
-The generators (train_generator and validation_generator) will provide batches of preprocessed images and labels during training.
 
-Part 2: Loading and Preprocessing the Dataset
-In this part, we load and preprocess the dataset using ImageDataGenerator. We specify augmentation and normalization transformations for the training data. 
-The generators (train_generator and validation_generator) will provide batches of preprocessed images and labels during training.
+#Part 2: Loading and Preprocessing the Dataset
+#In this part, we load and preprocess the dataset using ImageDataGenerator. We specify augmentation and normalization transformations for the training data. 
+#The generators (train_generator and validation_generator) will provide batches of preprocessed images and labels during training.
+
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
