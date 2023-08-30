@@ -64,3 +64,21 @@ model = Sequential([
     Dropout(0.5),
     Dense(num_classes, activation='softmax')
 ])
+
+#Part 4: Compiling the Model
+#After creating the model, we need to compile it. 
+#We specify the optimizer (Adam), loss function (categorical cross-entropy for multi-class classification), and evaluation metrics (accuracy).
+
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+#Part 5: Training the Model
+#Finally, we train the model using the fit function.
+#We pass the training and validation generators, the number of epochs, and the training process begins.
+#The training history is stored in the history variable, which can be used for analyzing training and validation metrics.
+
+epochs = 20
+history = model.fit(
+    train_generator,
+    epochs=epochs,
+    validation_data=validation_generator
+)
