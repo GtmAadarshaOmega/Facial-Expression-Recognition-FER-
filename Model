@@ -82,3 +82,14 @@ history = model.fit(
     epochs=epochs,
     validation_data=validation_generator
 )
+
+#Part 6: Saving the Model
+# Save model architecture as JSON
+model_architecture = model.to_json()
+with open('model_architecture.json', 'w') as json_file:
+    json_file.write(model_architecture)
+
+# Save model weights
+model.save_weights('model_weights.h5')
+
+#This saves the model architecture in a JSON file called 'model_architecture.json' and the trained weights in an HDF5 file called 'model_weights.h5'. 
